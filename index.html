@@ -2,43 +2,48 @@
 <html>
     <head>
         <h1 id='header'>HP's Webpage and Designs</h1>
-        <link rel = "stylesheet" href = "styles.css">
-        <meta charset="UTF-8">;
-
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href = "styles/styles.css">
+        <meta charset="UTF-8">
     </head> 
     <nav>
         <ul>
-            <li style = 'border-left: 1px solid white'><a href = '#'>Home</a></li>
+            <li style='border-left: 1px solid white'><a href = '#'>Home</a></li>
             <li><a href = '#'>Home</a></li>
-            <li style = 'border-left: 1px solid white; float:right'><a href = '#'>About</a></li>
+            <li style='border-left: 1px solid white; float:right'><a href = '#'>About</a></li>
         </ul>
     </nav>
-
     <body>
         <div>
             <h2>Games</h2>
             <div id='rpsgameContainer'>
-                <div id = 'rpsSelectionButtons'>
-                    <button id="chooseRock">Rock</button>
-                    <button id="choosePaper">Paper</button>
-                    <button id="chooseScissors">Scissors</button>
+                <div id='rpsSelectionButtons' class = 'makerpsButtonSize'>
+                    <button id="chooseRock" class = 'makerpsButtonSize'>Rock</button>
+                    <button id="choosePaper" class = 'makerpsButtonSize'>Paper</button>
+                    <button id="chooseScissors" class = 'makerpsButtonSize'>Scissors</button>
                 </div>
                 <div id='rpsResultContainer'>
                     <p>
                         <div>
-                            <p>Play Rock, Paper, Scissors! <br> Results Here</p>
+                            <p id='resultInfo'>Play Rock, Paper, Scissors! <br> Results Here</p>
                         </div>
                     </p>
                 </div>
             </div>
-        </div id = 'drawGameContainer'>
-            <div id ='drawGame'>
-            
+            <div id="mainContainer" class = 'container'>
+                <div id="drawButtonContainer">
+                    <button id = "makeGrid16px" class = "make-grid-size">16x16 Grid</button>
+                    <button id = "makeGrid32px" class = "make-grid-size">32x32 Grid</button>
+                    <button id = "makeGrid64px" class = "make-grid-size">64x64 Grid</button>
+                </div>
+                <button id = "drawResetButton">Clear Grid</button>
+                <div id ='gridContainer' class = 'grid'></div>
+                
             </div>
-        </div>
+            
     </body>
 
-    <script> src = "scripts.js"</script>
+    <script src = scripts/scripts.js></script>
 
 </html>
     

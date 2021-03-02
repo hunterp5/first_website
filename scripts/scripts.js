@@ -1,20 +1,11 @@
-function inputConversion () {
-    let userPrompt = prompt("Rock, Paper, Scissors!");
-        userInput = userPrompt.toLowerCase();
-    return userInput;
-}
-
 function generateRandom () {
     computerSelection = [Math.floor((Math.random()) * (3))];
     return computerSelection;
 }
-
 function playRound (userInput, computerSelection) {
-    
     let tie = "This round is a tie,";
         lose = "You lose this round,";
         win = "You win this round,";
-
     switch (userInput) {
             case userInput = "1":
                 if (computerSelection == 0) {
@@ -25,7 +16,6 @@ function playRound (userInput, computerSelection) {
                     result = win;
                 }
                 break;
-        
             case userInput = "2":
                 if (computerSelection == 0) {
                     result = win;
@@ -35,7 +25,6 @@ function playRound (userInput, computerSelection) {
                     result = lose;
                 }
                 break;
-
             case userInput = "3":
                 if (computerSelection == 0) {
                     result = lose;
@@ -44,10 +33,6 @@ function playRound (userInput, computerSelection) {
                 } else if (computerSelection == 2) {
                     result = tie;
                 }
-                break;
-            
-            default:
-                console.log("You did not make a valid selection");
                 break;
     }
     return result;
@@ -78,7 +63,6 @@ function checkWinner () {
         return computerScore;
     }
 }
-
 function addScore () {
         let items = ['Rock!', 'Paper!', 'Scissors!'];
         if (result == win) {
@@ -105,7 +89,6 @@ function addScore () {
             return computerScore; 
         }
 
-
     const button1 = document.querySelector('#chooseRock');
     button1.addEventListener('click', () => {
         userInput = '1';
@@ -114,7 +97,6 @@ function addScore () {
         addScore();
         checkWinner();
         });
-    
     const button2 = document.querySelector('#choosePaper');
     button2.addEventListener('click', () => {
         userInput = '2';
@@ -123,7 +105,6 @@ function addScore () {
         addScore();
         checkWinner();
         });
-
     const button3 = document.querySelector('#chooseScissors');
     button3.addEventListener('click', () => {
         userInput = '3';
@@ -132,33 +113,73 @@ function addScore () {
         addScore();
         checkWinner();
         });
+    
+    const gridGame = document.querySelector('#gridContainer');
+    function makeGrid (size) {
+        for (let i = 0; i < size * size; i++) {
+            gridElement = document.createElement("div");
+            gridElement.classList = "grid-element"
+            gridGame.appendChild(gridElement);
+            gridElement.addEventListener("mouseover", randomRGB)
+            function randomRGB () {
+            let r = (Math.floor(Math.random() * 255));
+            let g = (Math.floor(Math.random() * 255));
+            let b = (Math.floor(Math.random() * 255));
+            let color = "rgb("+ r + "," + g + "," + b + ")"
+            event.target.style.background = color;
+        }
+    
+    }
+    }
 
+    function setGridSize(userSize) {
+    gridGame.style.gridTemplateColumns = `repeat(${userSize}, 1fr)`;
+    }
 
-let container = document.querySelector('#drawGame');
-let rows = document.getElementsByClassName("gridRow")
-let cells = document.getElementsByClassName("gridColumns")
+    function defaultGrid () {
+        setGridSize(16);
+        makeGrid(16);
+    }
 
-function makeRows (row) {
-for (let i=0; i < row; i++) {
-let newRow = document.createElement("div");
-container.appendChild(newRow).className = "gridRow";
-console.log(newRow);
-}  
-} 
+    function newGrid16px () {
+        setGridSize(16);
+        makeGrid(16);
+    }
 
-function makeColumns (col) {
-for (let a=0; a < col; a++) {
-for (b=0; b < col; b++) {
-let newColumn = document.createElement("div");
-newColumn.textContent = "d"
-rows[b].appendChild(newColumn).className = "gridColumns";
-}
-}
-}
+    function newGrid32px () {
+        setGridSize(32);
+        makeGrid(32);
+    }
 
-function defaultGrid () {
-makeRows(30); 
-makeColumns(30);
-}
+    function newGrid64px () {
+        setGridSize(64);
+        makeGrid(64);
+    }
 
-defaultGrid()
+    function clearGrid () {
+        const gridArray=Array.from(gridContainer.childNodes);
+        gridArray.forEach((element) => {
+            gridContainer.removeChild(element);
+        });
+    }
+
+    function randomRGB () {
+        let r = (Math.floor(Math.random * 256));
+        let g = (Math.floor(Math.random * 256));
+        let b = (Math.floor(Math.random * 256));
+        gridElement.style.background = 'black';
+    }
+
+    defaultGrid();
+
+    const resetButton = document.querySelector('#drawResetButton');
+    resetButton.addEventListener('click', clearGrid);
+
+    const makeNew16pxGrid = document.querySelector('#makeGrid16px');
+    makeNew16pxGrid.addEventListener('click', newGrid16px);
+
+    const makeNew32pxGrid = document.querySelector('#makeGrid32px');
+    makeNew32pxGrid.addEventListener('click', newGrid32px);
+
+    const makeNew64pxGrid = document.querySelector('#makeGrid64px');
+    makeNew64pxGrid.addEventListener('click', newGrid64px);
