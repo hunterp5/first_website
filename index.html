@@ -31,15 +31,43 @@
                 </div>
             </div>
             <div id="mainContainer" class = 'container'>
-                <div id="drawButtonContainer">
-                    <button id = "makeGrid16px" class = "make-grid-size">16x16 Grid</button>
-                    <button id = "makeGrid32px" class = "make-grid-size">32x32 Grid</button>
-                    <button id = "makeGrid64px" class = "make-grid-size">64x64 Grid</button>
+                <div id = "drawGameContainer">
+                    <div id="drawButtonContainer">
+                        <button id = "makeGrid16px" class = "make-grid-size">16x16 Grid</button>
+                        <button id = "makeGrid32px" class = "make-grid-size">32x32 Grid</button>
+                        <button id = "makeGrid64px" class = "make-grid-size">64x64 Grid</button>
+                    </div>
+                    <button id = "drawResetButton">Clear Grid</button>
+                    <div id ='gridContainer' class = 'grid'></div>
                 </div>
-                <button id = "drawResetButton">Clear Grid</button>
-                <div id ='gridContainer' class = 'grid'></div>
+                
+                <div id = "calcContainer">
+                    <div id = "calculator">
+                      <div id = "calcResultsContainer">
+                        </div>
+                      <button class = 'numButton' id = 'seven' value = '7'>7</button>
+                      <button class = 'numButton' id = 'eight' value = '8'>8</button>
+                      <button class = 'numButton' id = 'nine' value = '9'>9</button>
+                      <button class = 'opButton' id = 'divide' value = '/'>/</button> <!--Row one-->
+                      <button class = 'numButton' id = 'four' value = '4'>4</button>
+                      <button class = 'numButton' id = 'five' value = '5'>5</button>
+                      <button class = 'numButton' id = 'six' value = '6'>6</button>
+                      <button class = 'opButton' id = 'multiply' value = '*'>X</button> <!--Row two-->
+                      <button class = 'numButton' id = 'one' value = '1'>1</button>
+                      <button class = 'numButton' id = 'two' value = '2'>2</button>
+                      <button class = 'numButton' id = 'three' value = '3'>3</button>
+                      <button class = 'opButton' id = 'subtract' value = '-'>-</button> <!--Row three-->
+                      <button class = 'numButton' id = 'zero' value = '0'>0</button>
+                      <button class = 'button' id = 'decimal' value = '.'>.</button>
+                      <button class = 'button' id = 'clear'>Clear</button>
+                      <button class = 'opButton' id = 'add' value = '+'>+</button> <!--Row four-->
+                      <button class = 'button' id = 'equals' value = '='>=</button>
+                    </div>
+                </div>
+            </div>
                 
             </div>
+            
             
     </body>
 
