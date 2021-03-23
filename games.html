@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <h1 id='header'>HP's Webpage and Designs</h1>
+        <h1 id='header'>HP's Experimental Webpage</h1>
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = "styles/styles.css">
         <meta charset="UTF-8">
     </head> 
-    <nav>
-        <ul>
-            <li style='border-left: 1px solid white'><a href = 'index.html'>Home</a></li>
-            <li><a href = 'games.html'>Games</a></li>
-            <li style='border-left: 1px solid white; float:right'><a href = 'about.html'>About</a></li>
-        </ul>
-    </nav>
     <body>
+        <nav>
+            <ul class = "navbar">
+                <li class = "navbarList" style='border-left: 1px solid rgb(255,255,255,0.5)'><a href = 'index.html'>Home</a></li>
+                <li class = "navbarList" style='border-right: 1px solid rgb(255,255,255,0.5)'><a href = 'games.html'>Games</a></li>
+                <li class = "navbarList" style='border-left: 1px solid rgb(255,255,255,0.5); float:right'><a href = 'about.html'>About</a></li>
+            </ul>
+        </nav>
         <div>
-            <h2>Games</h2>
-            <div id='rpsgameContainer'>
-                <div id='rpsSelectionButtons' class = 'makerpsButtonSize'>
-                    <button id="chooseRock" class = 'makerpsButtonSize'>Rock</button>
-                    <button id="choosePaper" class = 'makerpsButtonSize'>Paper</button>
-                    <button id="chooseScissors" class = 'makerpsButtonSize'>Scissors</button>
+            <div id='rpsGameContainer'>
+                <div id='rpsSelectionButtons'>
+                    <button id="chooseRock" class = 'rpsGameButton'>Rock</button>
+                    <button id="choosePaper" class = 'rpsGameButton'>Paper</button>
+                    <button id="chooseScissors" class = 'rpsGameButton'>Scissors</button>
                 </div>
                 <div id='rpsResultContainer'>
                     <p>
@@ -29,47 +30,53 @@
                         </div>
                     </p>
                 </div>
-                
+                <p id = "rpsDescription">Description:<br>A simple game where you can choose rock, paper, or scissors. The computer will return a random response and display round-by-round results. Currently configured to play five rounds.</p>
             </div>
-            <div id="mainContainer" class = 'container'>
-                <div id = "drawGameContainer">
-                    <div id="drawButtonContainer">
-                        <button id = "makeGrid16px" class = "make-grid-size">16x16 Grid</button>
-                        <button id = "makeGrid32px" class = "make-grid-size">32x32 Grid</button>
-                        <button id = "makeGrid64px" class = "make-grid-size">64x64 Grid</button>
-                    </div>
+            <div id = "drawGameContainer">
+                <div id="drawButtonContainer">
+                    <button id = "makeGrid16px" class = "make-grid-size">16x16 Grid</button>
+                    <button id = "makeGrid32px" class = "make-grid-size">32x32 Grid</button>
+                    <button id = "makeGrid64px" class = "make-grid-size">64x64 Grid</button>
                     <button id = "drawResetButton">Clear Grid</button>
-                    <div id ='gridContainer' class = 'grid'></div>
                 </div>
                 
-                <div id = "calcContainer">
-                    <div id = "calculator">
-                      <div id = "calcResultsContainer">
-                        </div>
-                      <button class = 'numButton' id = 'seven' value = '7'>7</button>
-                      <button class = 'numButton' id = 'eight' value = '8'>8</button>
-                      <button class = 'numButton' id = 'nine' value = '9'>9</button>
-                      <button class = 'opButton' id = 'divide' value = '/'>/</button> <!--Row one-->
-                      <button class = 'numButton' id = 'four' value = '4'>4</button>
-                      <button class = 'numButton' id = 'five' value = '5'>5</button>
-                      <button class = 'numButton' id = 'six' value = '6'>6</button>
-                      <button class = 'opButton' id = 'multiply' value = '*'>X</button> <!--Row two-->
-                      <button class = 'numButton' id = 'one' value = '1'>1</button>
-                      <button class = 'numButton' id = 'two' value = '2'>2</button>
-                      <button class = 'numButton' id = 'three' value = '3'>3</button>
-                      <button class = 'opButton' id = 'subtract' value = '-'>-</button> <!--Row three-->
-                      <button class = 'numButton' id = 'zero' value = '0'>0</button>
-                      <button class = 'button' id = 'decimal' value = '.'>.</button>
-                      <button class = 'button' id = 'clear'>Clear</button>
-                      <button class = 'opButton' id = 'add' value = '+'>+</button> <!--Row four-->
-                      <button class = 'button' id = 'equals' value = '='>=</button>
+                <div id ='gridContainer' class = 'grid'></div>
+                <p id = "drawDescription">Description: <br><br> A cool mosaic builder that allows you to build a grid of different sizes. Hovering over the grid causes each mosaic tile to turn a random RGB color. <br><br>
+                Cool Potential Additions: <br><br>
+                    <strong>
+                        - Play Button - <br>
+                        - Do not affect already changed tiles - <br>
+                        - Grayscale option - <br>
+                        - Resizable Grid - <br>
+                        - Fix generating a grid on top of a grid - <br>
+                    </strong> 
+                </p>
+            </div>
+            <div id = "calcContainer">
+                <div id = "calculator">
+                    <div id = "calcResultsContainer">
                     </div>
+                    <button class = 'numButton' id = 'seven' value = '7'>7</button>
+                    <button class = 'numButton' id = 'eight' value = '8'>8</button>
+                    <button class = 'numButton' id = 'nine' value = '9'>9</button>
+                    <button class = 'opButton' id = 'divide' value = '/'>/</button> <!--Row one-->
+                    <button class = 'numButton' id = 'four' value = '4'>4</button>
+                    <button class = 'numButton' id = 'five' value = '5'>5</button>
+                    <button class = 'numButton' id = 'six' value = '6'>6</button>
+                    <button class = 'opButton' id = 'multiply' value = '*'>X</button> <!--Row two-->
+                    <button class = 'numButton' id = 'one' value = '1'>1</button>
+                    <button class = 'numButton' id = 'two' value = '2'>2</button>
+                    <button class = 'numButton' id = 'three' value = '3'>3</button>
+                    <button class = 'opButton' id = 'subtract' value = '-'>-</button> <!--Row three-->
+                    <button class = 'numButton' id = 'zero' value = '0'>0</button>
+                    <button class = 'button' id = 'decimal' value = '.'>.</button>
+                    <button class = 'button' id = 'clear'>Clear</button>
+                    <button class = 'opButton' id = 'add' value = '+'>+</button> <!--Row four-->
+                    <button class = 'button' id = 'equals' value = '='>=</button>
                 </div>
-                
-            </div>
-                
-            </div>
-            
+                <p>This calculator needs some serious work!</p>
+            </div>    
+        </div>  
     </body>
 
     <script src = scripts/scripts.js ></script>

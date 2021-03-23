@@ -2,27 +2,20 @@ body {
     font-family: 'Roboto', 'Arial';
     background-image: url("/img/background.jpg");
     background-position: center;
-    background-size: 1500px;
+    background-size: 1600px;
 }
 
-h2 {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    justify-content: center;
-}
 
-nav {
-    
-}
-
-ul {
+.navbar {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
-    background-color: rgb(0, 0, 0, .2);
+    background-color: rgb(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+    border-radius: 15px;
 }
 
-li {
+.navbarList {
     float: left;
     padding: 15px;
 }
@@ -37,6 +30,7 @@ li:hover {
     background-color: rgb(78, 78, 78);
 }
 
+
 #header {
     padding-top: 10px;
     padding-left: 10px;
@@ -44,10 +38,12 @@ li:hover {
     color: white;
 }
 
-#rpsgameContainer {
-    justify-content: center;
-    display: flex;
-    background-color: rgb(230, 230, 230);
+#rpsGameContainer {
+    grid-template-columns: auto auto auto;
+    justify-items: space-evenly;
+    align-items: center;
+    display: grid;
+    background-color: rgb(230, 230, 230, 0.6);
     margin-top: 10px;
     margin-bottom: 10px;
     border: 2px solid black;
@@ -58,54 +54,60 @@ li:hover {
     padding: 10px;
     margin: 20px;
     text-align: center;
-    background-color: rgb(148, 148, 148);
+    background-color: rgb(148, 148, 148, 0.5);
     border: 2px solid black;
     border-radius: 5px;
 }
 
 #rpsSelectionButtons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: fit-content;
+    justify-items: space-evenly;
     background-color: rgb(230, 230, 230);
-    padding: 10px;
+    padding: 20px;
     margin: 20px;
     border: 2px solid black;
     border-radius: 5px;
 }
 
-#mainContainer {
-    background-color: grey;
+#rpsDescription {
+    width: fit-content;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    background-color: rgb(148, 148, 148, 0.85);
     border: 2px solid black;
     border-radius: 5px;
-}
+  }
 
 #drawGameContainer {
+    background-color: rgb(230, 230, 230, 0.6);
     padding: 20px; 
     border: 2px solid black;
+    border-radius: 5px;
     display: grid;
-    justify-content: center;
-}
-#drawPlayButton {
-    height: 50px;
-}
-
-#drawResetButton {
-    height: 50px;
-    width: 500px;
-    margin-bottom: 20px;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    grid-column-gap: 20px;
 }
 
 #drawButtonContainer {
-    display: flex;
-    width: 500px;
-    justify-content: center;
+    display: grid;
+    justify-content: space-evenly;
+    align-content: center;
 }
 
-.makerpsButtonSize {
-    width: 33.33%;
-    overflow: hidden;
-}
+#drawDescription {
+    padding: 10px;
+    margin: 10px;
+    width:fit-content;
+    text-align: center;
+    background-color: rgb(148, 148, 148, 0.85);
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+
 .container {
     display: grid;
     padding: 20px;
@@ -134,13 +136,12 @@ li:hover {
     background-color: white;
 }
 
-.make-grid-size {
-    height: 50px;
-    width: 33.33%;
-}
+
 
 #calcContainer {
-    background-color: grey;
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color:rgb(230, 230, 230, 0.6);
     border: 2px solid black;
     border-radius: 5px;
     margin-top: 10px;
@@ -158,14 +159,10 @@ li:hover {
     border-radius: 5px;
   }
   
-  #calcContainer {
-    background-color: grey;
-    display: flex;
-    justify-content: center;
-  }
-  
   #calculator {
     background-color: rgb(207, 207, 207);
+    border: 2px solid black;
+    border-radius: 5px;
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto auto auto;
@@ -220,4 +217,9 @@ li:hover {
   #welcomeMessage {
       font-family: "Alex Brush";
       transform: rotate(-2deg);
+      font-size: 50px;
   }
+
+  
+
+  
