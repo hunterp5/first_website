@@ -45,26 +45,18 @@ let computerScore = 0;
 
 function checkWinner () {
     if (playerScore == 5) {
-        const winner = document.querySelector('p');
         const gameWinner = document.querySelector('#resultInfo');
         gameWinner.textContent = "The player wins!";
         playerScore = 0;
         computerScore = 0;
-        return playerScore;
-        return computerScore;
     } else if (computerScore == 5) {
-        const winner = document.querySelector('p');
         const gameWinner = document.querySelector('#resultInfo');
         gameWinner.textContent = "The computer wins!";
         playerScore = 0;
         computerScore = 0;
-        return playerScore;
-        return computerScore;
-    } else {
-        return playerScore;
-        return computerScore;
-    }
+    } 
 }
+
 function addScore () {
         let items = ['Rock!', 'Paper!', 'Scissors!'];
         if (result == win) {

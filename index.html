@@ -3,75 +3,31 @@
     <head>
         <h1 id='header'>HP's Webpage and Designs</h1>
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = "styles/styles.css">
         <meta charset="UTF-8">
     </head> 
-    <nav>
-        <ul>
-            <li style='border-left: 1px solid white'><a href = '#'>Home</a></li>
-            <li><a href = '#'>Home</a></li>
-            <li style='border-left: 1px solid white; float:right'><a href = '#'>About</a></li>
-        </ul>
-    </nav>
     <body>
-        <div>
-            <h2>Games</h2>
-            <div id='rpsgameContainer'>
-                <div id='rpsSelectionButtons' class = 'makerpsButtonSize'>
-                    <button id="chooseRock" class = 'makerpsButtonSize'>Rock</button>
-                    <button id="choosePaper" class = 'makerpsButtonSize'>Paper</button>
-                    <button id="chooseScissors" class = 'makerpsButtonSize'>Scissors</button>
-                </div>
-                <div id='rpsResultContainer'>
-                    <p>
-                        <div>
-                            <p id='resultInfo'>Play Rock, Paper, Scissors! <br> Results Here</p>
-                        </div>
-                    </p>
-                </div>
-            </div>
-            <div id="mainContainer" class = 'container'>
-                <div id = "drawGameContainer">
-                    <div id="drawButtonContainer">
-                        <button id = "makeGrid16px" class = "make-grid-size">16x16 Grid</button>
-                        <button id = "makeGrid32px" class = "make-grid-size">32x32 Grid</button>
-                        <button id = "makeGrid64px" class = "make-grid-size">64x64 Grid</button>
-                    </div>
-                    <button id = "drawResetButton">Clear Grid</button>
-                    <div id ='gridContainer' class = 'grid'></div>
-                </div>
-                
-                <div id = "calcContainer">
-                    <div id = "calculator">
-                      <div id = "calcResultsContainer">
-                        </div>
-                      <button class = 'numButton' id = 'seven' value = '7'>7</button>
-                      <button class = 'numButton' id = 'eight' value = '8'>8</button>
-                      <button class = 'numButton' id = 'nine' value = '9'>9</button>
-                      <button class = 'opButton' id = 'divide' value = '/'>/</button> <!--Row one-->
-                      <button class = 'numButton' id = 'four' value = '4'>4</button>
-                      <button class = 'numButton' id = 'five' value = '5'>5</button>
-                      <button class = 'numButton' id = 'six' value = '6'>6</button>
-                      <button class = 'opButton' id = 'multiply' value = '*'>X</button> <!--Row two-->
-                      <button class = 'numButton' id = 'one' value = '1'>1</button>
-                      <button class = 'numButton' id = 'two' value = '2'>2</button>
-                      <button class = 'numButton' id = 'three' value = '3'>3</button>
-                      <button class = 'opButton' id = 'subtract' value = '-'>-</button> <!--Row three-->
-                      <button class = 'numButton' id = 'zero' value = '0'>0</button>
-                      <button class = 'button' id = 'decimal' value = '.'>.</button>
-                      <button class = 'button' id = 'clear'>Clear</button>
-                      <button class = 'opButton' id = 'add' value = '+'>+</button> <!--Row four-->
-                      <button class = 'button' id = 'equals' value = '='>=</button>
-                    </div>
-                </div>
-            </div>
-                
-            </div>
-            
-            
+        <nav>
+            <ul>
+                <li style='border-left: 1px solid white'><a href = 'index.html'>Home</a></li>
+                <li style='border-right: 1px solid white'><a href = 'games.html'>Games</a></li>
+                <li style='border-left: 1px solid white; float:right'><a href = 'about.html'>About</a></li>
+            </ul>
+        </nav>
+        <div id = "welcome"> <!--This needs to be part of a modular grid.-->
+            <h1 id = "welcomeMessage">Welcome to my first website!</h1>
+            <p>This website is where I practice CSS styling and JavaScript, using no pre-configured code. 
+                I want everything on this website to be coded by hand, regardless of complexity. 
+                This is also where I will practice using modern web technologies, such as CSS pre-compilation, and frameworks. <br><br>
+            With these things in mind, this website will likely never be made to look very attractive, but rather be the ugly-duckling testing grounds for concepts I want to practice.  </p>
+        </div>
+        
     </body>
-
-    <script src = scripts/scripts.js></script>
-
+    
+    
+    
+    
 </html>
     

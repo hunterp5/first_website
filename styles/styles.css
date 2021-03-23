@@ -1,5 +1,8 @@
 body {
     font-family: 'Roboto', 'Arial';
+    background-image: url("/img/background.jpg");
+    background-position: center;
+    background-size: 1500px;
 }
 
 h2 {
@@ -9,26 +12,25 @@ h2 {
 }
 
 nav {
-    background-color: rgb(0, 0, 0);
+    
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
+    background-color: rgb(0, 0, 0, .2);
 }
 
 li {
     float: left;
     padding: 15px;
-    border-right: 1px solid white;
-    background-color: grey;
 }
 
 a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255, 0.8);
 }
 
 li:hover {
@@ -36,10 +38,10 @@ li:hover {
 }
 
 #header {
-    background-color: rgb(255, 255, 255);
     padding-top: 10px;
     padding-left: 10px;
     font-family: 'Fredoka One', 'Arial';
+    color: white;
 }
 
 #rpsgameContainer {
@@ -206,4 +208,16 @@ li:hover {
     grid-column: 1/5;
     width: 400px;
     justify-self: center;
+  }
+
+  #welcome {
+    background-color: rgb(148, 148, 148, 0.5);
+      padding: 10px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+  }
+
+  #welcomeMessage {
+      font-family: "Alex Brush";
+      transform: rotate(-2deg);
   }
