@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <h1 id='header'>HP's Experimental Webpage</h1>
+        <title>Home</title>
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
@@ -9,6 +9,7 @@
         <meta charset="UTF-8">
     </head> 
     <body>
+    <header><h1 id='header' href = "index.html"><a href = index.html>HP's Experimental Webpage</a></h1></header>
         <nav>
             <ul class = "navbar">
                 <li class = "navbarList" style='border-left: 1px solid rgb(255,255,255,0.5)'><a href = 'index.html'>Home</a></li>
@@ -26,6 +27,26 @@
                     thisButton.appendChild(textNode);
                 }
             </script>
-        </div>
-        
+            <button onclick = "thatFunction()">Test Test</button>
+            <script>
+                function thatFunction() {
+                alert("Test Test")
+                }
+            </script>
+            <div id = "formContainer">
+                <form method="POST" name="menu">
+                    <select name = "newForm">
+                        <option value = "" selected>Go To...</option>
+                        <option value = "">Val 1</option>
+                        <option value = "">Val 2</option>
+                        <option value = "">Val 3</option>
+                        <option value = "">Val 4</option> 
+                    </select> 
+            </div>    
+        </div><br>
+        <footer style = "color: white">
+            &copy; Hunter Picard, All rights reserved. <br>
+            <a href = mailto:hunterpicard@gmail.com?subject=Hey&body=Whats%20Up?>Email Me!</a>
+        </footer>
+    </body>     
 </html>
