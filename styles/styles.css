@@ -117,7 +117,7 @@ li:hover {
     overflow: hidden;
 }
 
-.grid {
+.grid-gen {
     display: grid;
     border: 1px solid black;
     background-color: rgb(230, 230, 230);
@@ -236,12 +236,48 @@ li:hover {
   }
   
   table {
+    border-collapse: collapse;
     color: white;
+  }
+
+  th, td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  tr {
+    text-align: left;
+  }
+
+  tfoot tr:last-child td {
+    border: none;
   }
 
   h2 {
     color: white;
     border-bottom: 1px solid white;
+  }
+
+  label {
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+    color: white;
+  }
+
+  legend {
+    color: white;
+    font-family: "Alex Brush";
+  }
+
+  textarea {
+    vertical-align: top;
+  }
+
+  form {
+    margin: 0 auto;
+    width: 500px;
   }
   
 
