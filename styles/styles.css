@@ -36,6 +36,7 @@ li:hover {
     padding-left: 10px;
     font-family: 'Fredoka One', 'Arial';
     color: white;
+    width: 450px;
 }
 
 #rpsGameContainer {
@@ -222,6 +223,26 @@ li:hover {
       font-size: 50px;
   }
 
+  #vidContainer {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-evenly;
+  }
+
+  footer {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+  }
+  
+  table {
+    color: white;
+  }
+
+  h2 {
+    color: white;
+    border-bottom: 1px solid white;
+  }
   
 
   
